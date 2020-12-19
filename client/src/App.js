@@ -50,16 +50,16 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const [data, setData] = useState({
-    firstName: 'Harsh',
-    lastName: 'Raj',
-    email: 'rajharsh81070@gmail.com',
-    street: 'Shivpuram',
-    city: 'Patna',
-    state: 'Bihar',
-    zip: '800014',
+    firstName: 'Chandu',
+    lastName: 'Jinka',
+    email: 'chandujinka9@gmail.com',
+    street: 'chandupuram',
+    city: 'Hyderabad',
+    state: 'Telangana',
+    zip: '533238',
     country: 'India',
     phone: '1234567890',
-    amount: 100
+    amount: 200
   });
 
   const [isLoading, setIsLoading] = useState(false);
@@ -124,10 +124,11 @@ function App() {
 
   return (
     <React.Fragment>
+      <div className="forms">
       <CssBaseline />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
+      <AppBar position="absolute" color="primary" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
+          <Typography variant="h3" color="inherit" noWrap align="center">
             ROIIM Assignment
           </Typography>
         </Toolbar>
@@ -138,7 +139,7 @@ function App() {
             Checkout
           </Typography>
           <form onSubmit={handleSubmit}>
-            <Form data={data} handleChange={handleChange} />
+            <Form data={data} handleChange={handleChange}  />
             <div className={classes.buttons}>
               {
                 isLoading ?
@@ -146,7 +147,7 @@ function App() {
                   :
                   <Button
                     variant="contained"
-                    color="primary"
+                    color="secondary"
                     className={classes.button}
                     type="submit"
                   >
@@ -156,6 +157,7 @@ function App() {
           </form>
         </Paper>
       </main>
+      </div>
     </React.Fragment>
   );
 }

@@ -2,10 +2,12 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 
+
+
 export default function Form({ data, handleChange }) {
   return (
-    <React.Fragment>
-      <Grid container spacing={3}>
+    <React.Fragment >
+      <Grid container spacing={3} className="borms">
         <Grid item xs={12} sm={6}>
           <TextField
             required
@@ -15,6 +17,7 @@ export default function Form({ data, handleChange }) {
             value={data.firstName}
             fullWidth
             onChange={handleChange}
+            color="primary"
           />
         </Grid>
         <Grid item xs={12} sm={6}>
